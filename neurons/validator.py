@@ -209,7 +209,7 @@ class Validator(base.BaseValidator):
 
             logger.debug(f"Processing upscaling UIDs in batch: {uids}")
             forward_tasks = [
-                self.dendrite.forward(axons=[axon], synapse=synapse, timeout=60)
+                self.dendrite.forward(axons=[axon], synapse=synapse, timeout=35)
                 for axon, synapse in zip(axons, synapses)
             ]
 
